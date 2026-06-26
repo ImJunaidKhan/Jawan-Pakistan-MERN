@@ -1,0 +1,131 @@
+/* Header CSS */
+.masthead {
+    background-color: black;
+}
+
+header {
+    max-width: 1240px;
+    padding: 8px 50px 8px 50px;
+    margin: 0 auto !important;
+}
+
+#logo img {
+    width: 165px;
+    height: auto;
+}
+
+nav {}
+
+ul.nav {
+    justify-content: flex-end;
+    margin-top: 15px;
+}
+
+nav a {
+    color: #ffffff !important;
+}
+
+a.btn {
+    padding: 12px 20px;
+    background-color: transparent;
+    border: 1px solid #ffffff;
+    border-radius: 25px;
+    margin-top: -5px;
+    margin-left: 10px;
+    color: #ffffff;
+}
+
+nav a.btn.cta {
+    margin-left: 15px;
+    background-color: red;
+    border: 2px solid red;
+}
+
+nav a.cta i {
+    margin-left: 4px;
+    position: relative;
+    top: 2px;
+    font-size: 20px;
+}
+
+/* Hero Cover CSS */
+.hero-cover img {
+    width: 100%;
+}
+
+/* Businesses Section CSS */
+.businesses {
+    text-align: center;
+    background-color: black;
+    padding: 100px 50px 150px 50px;
+    color: #ffffff;
+}
+
+.businesses-grid {
+    padding-top: 20px !important;
+    max-width: 920px;
+    margin: 0 auto !important;
+}
+
+.businesses-grid img {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px 10px;
+}
+
+.businesses-grid a.btn {
+    margin-top: 30px;
+    width: 174px;
+}
+
+/* Footer Socket CSS */
+footer {
+    background-color: #000000;
+    border-top: 1px solid gray;
+    padding: 10px 50px;
+    color: #ffffff;
+}
+
+footer .socket p {
+    margin-bottom: 0px;
+}
+
+footer .socket .powered-txt {
+    text-align: right;
+}
+
+footer a {
+    color: #ffffff;
+    text-underline-offset: 2px;
+}
+
+/* Mobile Media Query */
+@media (max-width: 991px) {
+
+    .businesses {
+        padding: 50px 20px;
+    }
+
+    .businesses-grid > div {
+        margin-bottom: 50px;
+    }
+
+
+
+    footer .socket .powered-txt {
+        text-align: center !important;
+        margin-top: 10px;
+    }
+
+    ul.nav {
+        justify-content: center !important;
+        text-align: center;
+        margin-top: 10px !important;
+    }
+
+    .nav a.btn {
+        margin: 10px 0 !important;
+        width: 100%;
+        text-align: center;
+    }
+}
