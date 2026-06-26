@@ -1,0 +1,247 @@
+:root {
+    --primary-color: #70F3A7;
+    --text-color: #959699;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    color: var(--primary-color);
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 300;
+    font-family: "Fira Mono", monospace;
+}
+
+.logo span {
+    font-weight: 900;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    background-color: #24242673;
+    z-index: 1000;
+}
+
+header .row {
+    min-height: 80px;
+}
+
+header nav .nav-link {
+    font-size: 18px;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+header nav .nav-link:hover,
+header nav .nav-link:active,
+header nav .nav-link:focus {
+    color: var(--primary-color);
+    font-weight: 700 !important;
+}
+
+header .contact-icons i {
+    font-size: 24px;
+}
+
+header .header-email i {
+    font-size: 26px;
+}
+
+.hero-section {
+    background-image: url(./images/hero-cover-v2.jpg);
+    background-size: cover;
+    background-position: bottom center;
+    min-height: 600px;
+    height: 100vh;
+    padding-top: 120px;
+}
+
+.hero-section .row .col-lg-4 {
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-section h1 {
+    font-family: "Fira Mono", monospace;
+    font-size: 36px;
+}
+
+.hero-section a {
+    color: var(--primary-color);
+    font-size: 22px;
+    font-family: "Fira Mono", monospace;
+    text-transform: uppercase;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    font-weight: 700;
+}
+
+.hero-section a:hover {
+    color: #ffffff;
+    transition: all 0.3s ease-in-out;
+}
+
+.hero-section h4 {
+    width: fit-content;
+    font-size: 16px;
+}
+
+.hero-section p {
+    color: var(--text-color);
+    font-size: 18px;
+    letter-spacing: 1px;
+    line-height: 28px;
+}
+
+.hero-section .highlights-section {
+    position: absolute;
+    bottom: 20px;
+    text-transform: uppercase;
+}
+
+.introduction-section {
+    padding: 100px 0px;
+    background:
+        radial-gradient(700px circle at 12% 50%,
+            rgba(38, 58, 95, 0.35) 0%,
+            rgba(38, 58, 95, 0.15) 35%,
+            transparent 70%),
+        #25262A;
+}
+
+.introduction-section .skill-cards .card {
+    padding: 40px 40px 30px 40px;
+    margin-bottom: 10px;
+    background: #2A2C31;
+    border-radius: 12px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.25);
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.introduction-section .card h2 {
+    font-family: "Fira Mono", monospace;
+    font-size: 24px;
+    font-weight: 900;
+}
+
+.introduction-section .card h5 {
+    font-family: "Fira Mono", monospace;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-top: 14px;
+    transition: all 0.3s ease-in-out;
+}
+
+.introduction-section .card:hover h5 {
+    color: var(--primary-color);
+}
+
+.introduction-section .about-me h3 {
+    font-family: "Fira Mono", monospace;
+}
+
+.introduction-section .about-me h4 {
+    font-family: "Fira Mono", monospace;
+    font-size: 18px;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    color: var(--text-color);
+}
+
+.introduction-section .about-me p {
+    line-height: 32px;
+    color: var(--text-color);
+}
+
+.brands {
+    padding-top: 100px;
+    padding-bottom: 0px;
+}
+
+.brand-logos img {
+    max-width: 240px;
+    width: 100%;
+    height: auto;
+}
+
+footer {
+    background-color: #2D2F33;
+    padding-top: 80px;
+    padding-bottom: 0px;
+}
+
+footer .widgets {
+    font-family: "Fira Mono", monospace;
+}
+
+footer .widgets h4 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+
+footer .widgets h5 {
+    font-family: "Fira Mono", monospace;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+footer h2:nth-child(2) {
+    color: var(--primary-color);
+}
+
+
+@media (max-width: 991px) {
+    header {
+        position: relative;
+        width: 100%;
+        background-color: transparent;
+        z-index: 1000;
+    }
+
+    .hero-section {
+        background: radial-gradient(circle at 60% 40%, #333333 0%, #1a1a1a 70%, #121212 100%);
+        ;
+        backdrop-filter: blur(500px);
+        min-height: 750px;
+        height: 90vh;
+        padding-top: 150px;
+        margin-top: -150px;
+    }
+
+    .hero-section .row .col-lg-4 {
+        height: 450px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .hero-section .highlights-section {
+        position: absolute;
+        bottom: 50px;
+    }
+
+    .introduction-section {
+        padding: 50px 0px 80px 0px;
+    }
+
+    .introduction-section .mobile-dp {
+        border-radius: 50px 50px 20px 20px;
+    }
+}
