@@ -1,3 +1,8 @@
+:root {
+    --primary-color: #F3EAD8;
+    --secondary-color: red;
+}
+
 body {
     font-family: "Jost", sans-serif;
 }
@@ -42,4 +47,31 @@ body {
     font-size: 20px;
     line-height: 32px;
     font-weight: 500;
+}
+
+.hero-slider .carousel-content button {
+    border-radius: 0px;
+}
+
+.cards-section .card-img-overlay {
+    position: absolute;
+    bottom:0px;
+    top: inherit;
+}
+
+.testimonials-carousel {
+    padding-top: 120px;
+    padding-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: var(--primary-color);
+}
+
+.shop-category-banner {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    background-color: var(--primary-color);
 }
