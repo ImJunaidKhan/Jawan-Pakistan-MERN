@@ -1,0 +1,45 @@
+body {
+    font-family: "Jost", sans-serif;
+}
+
+.headline-banner a {
+    color: gold;
+    text-underline-offset: 5px;
+}
+
+.hero-slider {
+    position: relative;
+    height: 600px;
+}
+
+.hero-slider img {
+    height: 600px;
+}
+
+.hero-slider .carousel-content {
+    position: absolute;
+    z-index: 1;
+    top: 15%;
+    left: 10%;
+    text-align: center;
+    width: 40%;
+}
+
+.hero-slider .carousel-content h2 {
+    font-size: 40px;
+    color: red;
+    font-family: 'Clicker Script', cursive;
+    font-weight: 400;
+}
+
+.hero-slider .carousel-content h3 {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.hero-slider .carousel-content p {
+    color: #767676;
+    font-size: 20px;
+    line-height: 32px;
+    font-weight: 500;
+}
