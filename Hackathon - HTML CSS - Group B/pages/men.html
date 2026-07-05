@@ -44,15 +44,16 @@
                         <li><a href="#" class="text-decoration-none text-dark">Careers</a></li>
                     </ul>
                 </div>
-                <div class="col-12 col-lg-6 justify-content-center d-flex gap-4 justify-content-lg-end">
-                    <ul class="d-flex gap-4 list-unstyled">
+                <div
+                    class="col-12 col-lg-6 justify-content-center d-flex gap-0 gap-lg-4 justify-content-lg-end flex-column flex-lg-row">
+                    <ul class="d-flex gap-4 list-unstyled justify-content-center justify-content-lg-start">
                         <li><a href="#" class="text-decoration-none text-dark">My Wishlist</a></li>
                         <li><a href="#" class="text-decoration-none text-dark">Track Your
                                 Order</a>
                         </li>
                     </ul>
 
-                    <ul class="d-flex gap-3 list-unstyled">
+                    <ul class="d-flex gap-3 list-unstyled mt-3 mt-md-0 justify-content-center justify-content-lg-end">
                         <li><a href="#"><i class="fa-brands fa-facebook text-muted"></i></a></li>
                         <li><a href="#"><i class="fa-brands fa-instagram text-muted"></i></a></li>
                         <li><a href="#"><i class="fa-brands fa-twitter text-muted"></i></a></li>
@@ -65,32 +66,60 @@
 
         <section class="main-header container-fluid px-5 pt-3 pb-2">
             <div class="row d-flex align-items-center">
-                <div class="col-12 col-md-4 col-lg-2"><a href="./index.html"><img src="../media/logo.png" alt=""></a>
+                <div class="col-6 col-lg-2"><a href="./index.html"><img src="./media/logo.png" alt=""></a>
                 </div>
-                <nav class="col-12 col-md-8 col-lg-8">
-                    <ul class="list-unstyled d-flex justify-content-evenly align-items-center mt-3">
-                        <li>
-                            <a href="../index.html" class="text-decoration-none text-dark fs-6 fw-bold">Home</a>
-                        </li>
-                        <li>
-                            <a href="./men.html" class="text-decoration-none text-dark fs-6 fw-bold">Men</a>
-                        </li>
-                        <a href="./women.html" class="text-decoration-none text-dark fs-6 fw-bold">Women</a></li>
-                        <li>
-                            <a href="#" class="text-decoration-none text-dark fs-6 fw-bold">Baby Collection</a>
-                        </li>
-                        <li>
-                            <a href="#" class="text-decoration-none text-dark fs-6 fw-bold">Pages</a>
-                        </li>
-                        <li>
-                            <a href="#" class="text-decoration-none text-dark fs-6 fw-bold">Blog</a>
-                        </li>
-                        <li>
-                            <a href="#" class="text-decoration-none text-dark fs-6 fw-bold">Contact</a>
-                        </li>
-                    </ul>
+                <nav class="navbar navbar-expand-xl col-6 col-lg-8">
+
+                    <!-- Hamburger -->
+                    <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false"
+                        aria-label="Toggle navigation">
+
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <!-- Collapsible Menu -->
+                    <div class="collapse navbar-collapse" id="navbarMenu">
+
+                        <ul
+                            class="list-unstyled d-flex flex-column flex-lg-row justify-content-evenly align-items-center mt-3 w-100">
+
+                            <li>
+                                <a href="../index.html" class="text-decoration-none text-dark fs-6 fw-bold">Home</a>
+                            </li>
+
+                            <li>
+                                <a href="./men.html" class="text-decoration-none text-dark fs-6 fw-bold">Men</a>
+                            </li>
+
+                            <li>
+                                <a href="./women.html"
+                                    class="text-decoration-none text-dark fs-6 fw-bold">Women</a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="text-decoration-none text-dark fs-6 fw-bold">Baby Collection</a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="text-decoration-none text-dark fs-6 fw-bold">Pages</a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="text-decoration-none text-dark fs-6 fw-bold">Blog</a>
+                            </li>
+
+                            <li>
+                                <a href="./contact.html"
+                                    class="text-decoration-none text-dark fs-6 fw-bold">Contact</a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+
                 </nav>
-                <div class="col-12 col-lg-2">
+                <div class="col-12 col-lg-2 mt-3 mt-md-0">
                     <ul class="d-flex gap-3 list-unstyled justify-content-center align-items-center mt-1">
                         <li><a href="#"><i class="fa-solid fa-search text-muted fs-3"></i></a></li>
                         <li><a href="#"><i class="fa-regular fa-user text-muted fs-3"></i></a></li>
@@ -252,10 +281,37 @@
 
     </main>
 
+    <!--Footer-->
     <footer class="container-fluid px-5 pt-5 pb-3 bg-dark text-light">
-        <div class="row row-cols-5">
-            <div class="col-12 col-md-6 col-lg"><img src="../media/logo2_footer.png" alt="Logo Footer"></div>
-            <div class="col-12 col-md-6 col-lg">
+        <div class="row pb-4 border-bottom">
+            <div class="col-12 col-md-3">
+                <h4>Subscribe Newsletter</h4>
+                <p>Subscribe newsletter to get 5% on all products.</p>
+            </div>
+
+            <div class="col-12 col-md-6">
+                <div class="row d-flex align-items-center h-75">
+                    <div class="col-12 col-md-8">
+                        <input type="email" id="email" class="w-100 py-3 px-2" placeholder="Enter your email">
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <input type="submit" value="Subscribe" class="w-100 py-3 px-4 bg-danger text-light">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-3 mt-4 mt-md-0">
+                <ul class="d-flex gap-4 list-unstyled justify-content-center h-75 align-items-center">
+                    <li><a href="#"><i class="fa-brands fa-facebook fs-4 text-light"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-instagram fs-4 text-light"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-youtube fs-4 text-light"></i></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row row-cols-5 pt-4 text-center text-md-start">
+            <div class="col-12 col-md-6 col-lg"><img src="./media/logo2_footer.png" alt="Logo Footer"></div>
+            <div class="col-12 col-md-6 col-lg mt-3 mt-md-0">
                 <h5>Shop Men</h5>
                 <ul class="list-unstyled py-2 d-flex flex-column gap-2">
                     <li><a href="./men.html" class="text-decoration-none text-light">Clothing Fashion</a></li>
@@ -293,14 +349,14 @@
                     <li><a href="#" class="text-decoration-none text-light">FAQ</a></li>
                     <li><a href="#" class="text-decoration-none text-light">Carrier</a></li>
                     <li><a href="#" class="text-decoration-none text-light">About</a></li>
-                    <li><a href="#" class="text-decoration-none text-light">Contact us</a></li>
+                    <li><a href="./contact.html" class="text-decoration-none text-light">Contact us</a></li>
                 </ul>
             </div>
         </div>
         <div class="row text-center border-top border-light pt-5">
             <div class="col-12">
                 <p>Copyright ©2026 All rights reserved | This template is made with <i class="fa-solid fa-heart"
-                        style="color: red;"></i> by Colorlib</p>
+                        style="color: red;"></i> by JK</p>
             </div>
         </div>
     </footer>
@@ -308,6 +364,6 @@
     <!--Bootstrap Bundle-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script>]
 
 </body>

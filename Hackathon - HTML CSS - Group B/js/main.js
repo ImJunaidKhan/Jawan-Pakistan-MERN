@@ -1,0 +1,1 @@
+alert("Only Home, Men, Women, and Contact pages are developed.");
