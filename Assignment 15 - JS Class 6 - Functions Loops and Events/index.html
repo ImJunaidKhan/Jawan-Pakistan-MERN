@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 15 - JS Class 6</title>
+</head>
+
+<body>
+    <h1>Assignment 15 - JS Class 6</h1>
+    <h2>Functions, Loops and Events</h2>
+
+    <h3>Alert box on link click</h3>
+    <a href="javascript:void(0)" id="link" onClick="alert('You clicked the link!')">Click Me for Alert Box!</a>
+
+    <h3>Purchase a Phone (Maximum 3 alerts can show up due to browser behavior)</h3>
+    <div id="phoneContainer" style="margin-bottom: 10px;">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS87Bu-Rv6dYCNVbZdmnELWECbcRlgLQcHaM4gdR2K5EYTd28oSM1rED1A&s=10"
+            height="300px" width="auto" onClick="alert('Thank you for purchasing the phone!')" alt="Iphone Air">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTh09y27y23j0zdqtMiv-32DMWdInPI6qg2My2lAkJD5DsLTXO1AZABeZam&s=10"
+            height="300px" width="auto" onClick="alert('Thank you for purchasing the phone!')" alt="Iphone 17">
+        <img src="https://images.priceoye.pk/apple-iphone-17-pro-pakistan-priceoye-u2t8w-500x500.webp" height="300px"
+            width="auto" onClick="alert('Thank you for purchasing the phone!')" alt="Iphone 17 Pro">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRG_Ml2ReAyc9lI6-JJp2I1jbdBhfMdrHVaFv1UQwXF_x8wf8wPS74ZML_S&s=10"
+            height="300px" width="auto" onClick="alert('Thank you for purchasing the phone!')" alt="Iphone 17 Pro Max">
+        <img src="https://images.priceoye.pk/airpods-max-pakistan-priceoye-k1gp2.jpg" height="300px" width="auto"
+            onClick="alert('Thank you for purchasing the Headphones!')" alt="Apple Air Max">
+        <img src="https://xcessorieshub.com/wp-content/uploads/2024/09/Apple-AirPods-4-Wireless-Earbuds-Bluetooth-Headphones-with-Active-Noise-Cancellation.webp"
+            height="300px" width="auto" onClick="alert('Thank you for purchasing the Airpods!')" alt="Airpods 4">
+    </div>
+
+    <h3>Deletable Students Records</h3>
+    <table border="1px" cellpadding="10px">
+        <thead>
+            <tr>
+                <td>Index</td>
+                <td>Name</td>
+                <td>Class</td>
+                <td>Actions</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Muhammad Ali Jinnah</td>
+                <td>Matric</td>
+                <td><button onClick="deleteRow(this)">Delete</button></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Quaid e Azam</td>
+                <td>FSC</td>
+                <td><button onClick="deleteRow(this)">Delete</button></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Bilal</td>
+                <td>FSC</td>
+                <td><button onClick="deleteRow(this)">Delete</button></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Ali</td>
+                <td>BSCS</td>
+                <td><button onClick="deleteRow(this)">Delete</button></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Image Change on Hover</h3>
+    <img src="https://velvetescape.com/wp-content/uploads/2011/11/dawid-zawila-G3rw6Y02D0-unsplash.jpg"
+        alt="Change on Hover" onmouseover="changeImage(this)" onmouseout="restoreImage(this)" width="600px"
+        height="400px">
+
+    <h3>Counter</h3>
+    <h3 id="counter">0</h3>
+    <button onClick="increaseCounter()">Increase Counter</button>
+    <button onClick="decreaseCounter()">Decrease Counter</button>
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>

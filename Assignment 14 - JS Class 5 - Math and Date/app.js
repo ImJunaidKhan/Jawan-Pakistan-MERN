@@ -108,11 +108,11 @@
 // document.write("<h3>Later date: " + laterDate + "</h3>");
 
 // // Q9
-// var ramadanDate = new Date("June 18, 2015");
+// var ramadanDate = new Date("February 19, 2026");
 // var currentDate = new Date();
 // var diff = currentDate.getTime() - ramadanDate.getTime();
 // var daysPassed = Math.floor(diff / (1000 * 60 * 60 * 24));
-// alert(daysPassed + " days have passed since 1st Ramadan, 2015");
+// alert(daysPassed + " days have passed since 1st Ramadan, 2026");
 
 // // Q10
 // var referenceDate = new Date("Dec 05, 2015 22:50:16");
