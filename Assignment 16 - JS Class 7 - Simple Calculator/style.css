@@ -1,0 +1,115 @@
+* {
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+    background: #e2e8f0;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 32px;
+    color: #1e293b;
+    margin-bottom: 0px;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 22px;
+    color: #64748b;
+    margin-bottom: 40px;
+    font-weight: 500;
+}
+
+.calculator-wrapper {
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    max-width: 360px;
+    width: 100%;
+}
+
+/* Screen Input */
+.screen-wrapper {
+    padding-bottom: 24px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.screen-wrapper input {
+    height: 60px;
+    width: 100%;
+    padding: 0px 16px;
+    border-radius: 12px;
+    background-color: #0f172a;
+    color: #f8fafc;
+    font-size: 28px;
+    font-weight: 600;
+    text-align: right;
+    letter-spacing: 1px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+}
+
+.row {
+    display: flex;
+    gap: 12px;
+    width: 100%;
+}
+
+/* Buttons Global */
+.button {
+    flex: 1;
+    height: 60px;
+    border: none;
+    border-radius: 10px;
+    background-color: #f1f5f9;
+    color: #334155;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 600;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button:hover {
+    background-color: #e2e8f0;
+}
+
+/* Operator Buttons */
+.button.operator {
+    background-color: #3b82f6;
+    color: #ffffff;
+    font-size: 22px;
+}
+
+.button.operator:hover {
+    background-color: #2563eb;
+}
+
+/* Clear Screen Button */
+.screen-wrapper .button {
+    flex: auto;
+    background-color: #ef4444;
+    color: #ffffff;
+    width: 100px;
+}
+
+.screen-wrapper .button:hover {
+    background-color: #dc2626;
+}
