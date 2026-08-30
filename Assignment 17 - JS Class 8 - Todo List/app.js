@@ -6,8 +6,7 @@ if (uiElement.children.length === 0) {
 }
 
 function addToList() {
-    console.log(inputField.value)
-    uiElement.innerHTML += `<li>Task: ${inputField.value} <button onclick="updateList(this)" class="update-btn">Update</button></li>`;
+    uiElement.innerHTML += `<li><input type="checkbox" onclick="toggleTask(this)"> <span>Task: ${inputField.value}</span> <button onclick="updateList(this)" class="update-btn">Update</button> <button onclick="deleteList(this)" class="delete-task">Delete</button></li>`;
     inputField.value = "";
 }
 
@@ -20,5 +19,22 @@ function clearList() {
 function updateList(element) {
     var selectedTask = element.parentElement;
     var updatedText = prompt("Rename Task:");
-    selectedTask.innerHTML = `<li>Task: ${updatedText} <button onclick="updateList(this)" class="update-btn">Update</button></li>`;
+    selectedTask.innerHTML = `<input type="checkbox" onclick="toggleTask(this)"> <span>Task: ${updatedText}</span> <button onclick="updateList(this)" class="update-btn">Update</button> <button onclick="deleteList(this)" class="delete-task">Delete</button>`;
+}
+
+function deleteList(element) {
+    var selectedTask = element.parentElement;
+    selectedTask.remove();
+}
+
+function toggleTask(element) {
+    var taskText = element.nextElementSibling;
+
+    if (element.checked) {
+        taskText.style.textDecoration = "line-through";
+    }
+
+    else {
+        taskText.style.textDecoration = "none";
+    }
 }
