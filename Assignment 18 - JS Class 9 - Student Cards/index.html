@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 18 - Students Cards</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        main {
+            text-align: center;
+        }
+
+        h1 {
+            color: #024EA2;
+        }
+
+        .form-wrapper {
+            width: 450px;
+            border-radius: 30px;
+            background-color: #bbddff;
+            padding: 20px;
+            margin: 0 auto;
+        }
+
+        .form table td {
+            padding: 5px 10px;
+            text-align: left;
+        }
+
+        .form input {
+            width: 100%;
+            height: 22px;
+        }
+
+        .form button {
+            background: #024EA2;
+            border: 2px solid #ffffff;
+            border-radius: 30px;
+            padding: 10px 36px;
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .card {
+            max-width: 600px;
+            width: 100%;
+            border-radius: 0px;
+            overflow: hidden;
+            margin: 16px;
+        }
+
+        .card .cardheader {
+            height: 10px;
+            background-color: #024EA2;
+        }
+
+        .card .cardbody {
+            background-color: #024EA2;
+            padding: 8px;
+        }
+
+        .card .cardbody p {
+            color: #ffffff;
+            line-height: 22px;
+            margin: 0px;
+        }
+
+        .card .columnwrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 15px 35px;
+        }
+
+        .card .col-1 {
+            width: 65%;
+        }
+
+        .card .col-2 {
+            width: 35%;
+            text-align: center;
+        }
+
+        .card .logo {
+            max-width: 180px;
+            width: 100%;
+            height: auto;
+            text-align: left;
+            margin-bottom: 15px;
+        }
+
+        .card .col-1 p {
+            text-align: center;
+            margin: 8px;
+        }
+
+        .card .col-2 img {
+            max-width: 180px;
+            width: 100%;
+            height: auto;
+            border: 5px solid #024EA2;
+            border-radius: 20px;
+        }
+
+        .card .col-2 h3 {
+            text-transform: uppercase;
+            color: red;
+        }
+
+        .card .col-2 p {
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main>
+
+        <h1>Student ID Card Generator</h1>
+
+        <section class="form-wrapper">
+            <form action="" class="form" onsubmit="generateCard(event)">
+                <table>
+                    <tr>
+                        <td>
+                            <label for="studentid">Student ID: </label>
+                        </td>
+                        <td>
+                            <input type="text" id="studentid" name="studentid" maxlength="8" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="studentname">Student Name: </label>
+                        </td>
+                        <td>
+                            <input type="text" name="studentname" id="studentname" maxlength="40" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="guardian">Father/Guardian: </label>
+                        </td>
+                        <td>
+                            <input type="text" name="guardian" id="guardian" maxlength="40" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="class">Class: </label>
+                        </td>
+                        <td>
+                            <input type="text" name="class" id="class" maxlength="20" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="emergencyphone">Emergency Call: </label>
+                        </td>
+                        <td>
+                            <input type="tel" name="emergencyphone" id="emergencyphone" maxlength="13" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="studentphoto">Student Photo: </label>
+                        </td>
+                        <td>
+                            <input type="file" name="studentphoto" id="studentphoto" required
+                                accept="image/png, image/jpeg">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <button type="submit">Submit</button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </section>
+
+        <section class="ui-wrapper">
+            <div class="cards">
+            </div>
+        </section>
+
+    </main>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
