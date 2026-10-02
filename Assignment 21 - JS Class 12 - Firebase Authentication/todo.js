@@ -6,7 +6,12 @@ if (uiElement.children.length === 0) {
 }
 
 function addToList() {
-    uiElement.innerHTML += `<li><input type="checkbox" onclick="toggleTask(this)"> <span>Task: ${inputField.value}</span> <button onclick="updateList(this)" class="update-btn">Update</button> <button onclick="deleteList(this)" class="delete-task">Delete</button></li>`;
+    if (uiElement.innerHTML == "Item List Cleared." || uiElement.innerHTML === "The List is Empty.") {
+        uiElement.innerHTML = "";
+        uiElement.style.color = "inherit";
+    }
+
+    uiElement.innerHTML += `<li><input type="checkbox" onclick="toggleTask(this)"> <span>${inputField.value}</span> <button onclick="updateList(this)" class="update-btn">Update</button> <button onclick="deleteList(this)" class="delete-task">Delete</button></li>`;
     inputField.value = "";
 }
 
@@ -19,7 +24,7 @@ function clearList() {
 function updateList(element) {
     var selectedTask = element.parentElement;
     var updatedText = prompt("Rename Task:");
-    selectedTask.innerHTML = `<input type="checkbox" onclick="toggleTask(this)"> <span>Task: ${updatedText}</span> <button onclick="updateList(this)" class="update-btn">Update</button> <button onclick="deleteList(this)" class="delete-task">Delete</button>`;
+    selectedTask.innerHTML = `<input type="checkbox" onclick="toggleTask(this)"> <span>${updatedText}</span> <button onclick="updateList(this)" class="update-btn">Update</button> <button onclick="deleteList(this)" class="delete-task">Delete</button>`;
 }
 
 function deleteList(element) {

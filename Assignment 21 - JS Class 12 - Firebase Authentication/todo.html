@@ -11,27 +11,34 @@
 </head>
 
 <body>
-    <main>
+    <main class="dashboard">
 
-        <h1>Todo App Dashboard</h1>
+        <div class="title-bar">
+            <h1>Todo App</h1>
+        </div>
 
-        <div class="input-wrapper">
-            <input type="text" name="input-list" class="input-list" placeholder="Enter a task...">
+        <div class="page-wrapper">
 
-            <div class="input-btns">
+            <h2>Dashboard</h2>
 
-                <button onclick="addToList()" class="add-btn">Add</button>
-                <button onclick="clearList()" class="clear-btn">Clear</button>
+            <div class="input-wrapper">
+                <input type="text" name="input-list" class="input-list" placeholder="Enter a task...">
 
+                <div class="input-btns">
+
+                    <button onclick="addToList()" class="add-btn">Add</button>
+                    <button onclick="clearList()" class="clear-btn">Clear</button>
+
+                </div>
             </div>
+
+            <div class="ui-wrapper">
+                <ul class="ui-list">
+
+                </ul>
+            </div>
+
         </div>
-
-        <div class="ui-wrapper">
-            <ul class="ui-list">
-
-            </ul>
-        </div>
-
     </main>
 
     <script src="todo.js"></script>

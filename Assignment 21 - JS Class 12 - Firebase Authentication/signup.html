@@ -13,25 +13,33 @@
 <body>
     <main>
 
-        <h1>Register Now!</h1>
+        <div class="title-bar">
+            <h1>Todo App</h1>
+        </div>
 
-        <div class="login-wrapper">
-            <div class="input-wrapper">
-                <input type="email" name="email" class="email" placeholder="Email Address">
-                <input type="password" name="password" class="password" placeholder="Password">
+        <div class="page-wrapper">
+
+            <h2>Register Now!</h2>
+
+            <div class="login-wrapper">
+                <div class="input-wrapper">
+                    <input type="email" name="email" class="email" placeholder="Email Address">
+                    <input type="password" name="password" class="password" placeholder="Password">
+                </div>
+
+                <div class="input-btns">
+                    <button class="signup-btn">Register</button>
+                </div>
+                <div class="alt-link">
+                    <p>Already a member? <a href="index.html">Login here</a></p>
+                </div>
             </div>
 
-            <div class="input-btns">
-                <button onclick="signup()" class="signup-btn">Register</button>
-            </div>
-            <div class="alt-link">
-                <p>Already a member? <a href="index.html">Login here</a></p>
-            </div>
         </div>
 
     </main>
 
-    <script src="register.js"></script>
+    <script src="register.js" type="module" defer></script>
 </body>
 
 </html>
