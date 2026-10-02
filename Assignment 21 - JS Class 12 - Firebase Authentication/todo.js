@@ -5,7 +5,9 @@ if (uiElement.children.length === 0) {
     uiElement.innerHTML = "The List is Empty.";
 }
 
-function addToList() {
+function addToList(e) {
+    e.preventDefault();
+
     if (uiElement.innerHTML == "Item List Cleared." || uiElement.innerHTML === "The List is Empty.") {
         uiElement.innerHTML = "";
         uiElement.style.color = "inherit";

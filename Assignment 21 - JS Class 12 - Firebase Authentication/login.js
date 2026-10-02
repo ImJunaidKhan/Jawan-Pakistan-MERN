@@ -20,11 +20,13 @@ const app = initializeApp(firebaseConfig);
 
 const email = document.querySelector(".email");
 const password = document.querySelector(".password");
-const login = document.querySelector(".login-btn");
+const signupForm = document.querySelector("#signup-form");
 
 const auth = getAuth();
 
-login.addEventListener("click", () => {
+signupForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+
     signInWithEmailAndPassword(auth, email.value, password.value)
         .then((userCredential) => {
             // Signed in 
