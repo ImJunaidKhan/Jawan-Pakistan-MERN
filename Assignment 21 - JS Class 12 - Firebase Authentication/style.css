@@ -1,9 +1,12 @@
+/* Global CSS */
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f9;
     display: flex;
     justify-content: center;
     padding-top: 50px;
+    align-items: center;
+    height: 80vh;
 }
 
 main {
@@ -13,6 +16,9 @@ main {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 h1 {
@@ -21,34 +27,67 @@ h1 {
     color: #333;
 }
 
+button {
+    padding: 8px 12px;
+    cursor: pointer;
+    border: 1px solid #1F986C;
+    border-radius: 4px;
+    background-color: #1F986C;
+    color: #ffffff;
+}
+
+button:hover {
+    background-color: #ffffff;
+    color: #1F986C;
+    border: 1px solid #1F986C;
+}
+
+button a {
+    color: inherit;
+    text-decoration: none;
+}
+
 .input-wrapper {
     display: flex;
     gap: 10px;
     margin-bottom: 20px;
 }
 
+.input-btns {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+}
+
+/* Login CSS */
+.login-wrapper .input-wrapper {
+    flex-direction: column;
+}
+
+.login-wrapper input {
+    padding: 10px;
+    width: 100%;
+    max-width: 425px;
+    font-size: 16px;
+}
+
+.login-wrapper button {
+    width: 40%;
+    font-size: 18px;
+}
+
+.login-wrapper .alt-link {
+    text-align: center;
+    padding-top: 10px;
+}
+
+/* Dashboard CSS */
+
 .input-list {
     flex: 1;
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 4px;
-}
-
-.input-btns {
-    display: flex;
-    gap: 5px;
-}
-
-button {
-    padding: 8px 12px;
-    cursor: pointer;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    background-color: #e9e9e9;
-}
-
-button:hover {
-    background-color: #ddd;
 }
 
 .ui-list {
@@ -66,4 +105,23 @@ button:hover {
 
 .ui-list li span {
     flex: 1;
+}
+
+
+@media (max-width: 480px) {
+    .input-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 360px) {
+    .input-btns {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .input-btns button {
+        width: 80%;
+    }
 }
