@@ -14,7 +14,7 @@ signupForm.addEventListener("submit", (e) => {
             // Signed in 
             const user = userCredential.user;
             alert("Login Successful!");
-            window.location.href = "todo.html";
+            window.location.href = `todo.html?email=${email.value}`;
             // ...
         })
         .catch((error) => {

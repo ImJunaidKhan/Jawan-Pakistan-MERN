@@ -7,9 +7,6 @@ const password = document.querySelector("#password");
 const phone = document.querySelector("#phone");
 const gender = document.querySelector("#gender");
 const dob = document.querySelector("#dob");
-const placeofbirth = document.querySelector("#placeofbirth");
-const language = document.querySelector("#language");
-const fathername = document.querySelector("#fathername");
 
 const signupForm = document.querySelector("#signup-form");
 
@@ -28,16 +25,13 @@ signupForm.addEventListener("submit", (e) => {
                 email: email.value,
                 phone: phone.value,
                 gender: gender.value,
-                dob: dob.value,
-                placeofbirth: placeofbirth.value,
-                language: language.value,
-                fathername: fathername.value
+                dob: dob.value
             });
         })
 
         .then(() => {
             alert("Registration Successful");
-            window.location.href = "index.html";
+            window.location.href = `index.html`;
         })
 
         .catch((error) => {

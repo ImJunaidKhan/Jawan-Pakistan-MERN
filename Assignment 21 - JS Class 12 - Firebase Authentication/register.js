@@ -5,15 +5,7 @@ import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
-// Your web app's Firebase configuration
-const firebaseConfig = {
-    apiKey: "AIzaSyBGFsMA9DXHJGBoxrdQUyM7CBvHgYqhG2Y",
-    authDomain: "jawanpak-todoapp.firebaseapp.com",
-    projectId: "jawanpak-todoapp",
-    storageBucket: "jawanpak-todoapp.firebasestorage.app",
-    messagingSenderId: "1078748246257",
-    appId: "1:1078748246257:web:32727e1fa3a2a36f62f950"
-};
+import { firebaseConfig } from "./config.js";
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
