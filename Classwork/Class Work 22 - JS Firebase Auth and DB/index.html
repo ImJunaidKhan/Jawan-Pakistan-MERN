@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Todo App - Login</title>
+    <link rel="icon" type="image/x-icon" href="../JK-Favicon.png">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+
+        <div class="title-bar">
+            <h1>Facebook App</h1>
+        </div>
+
+        <form id="signup-form" class="page-wrapper">
+
+            <h2>Login</h2>
+
+            <div class="login-wrapper">
+                <div class="input-wrapper">
+                    <input type="email" name="email" class="email" placeholder="Email Address" required>
+                    <input type="password" name="password" class="password" placeholder="Password" required>
+                </div>
+
+                <div class="input-btns">
+                    <button class="login-btn" type="submit">Login</button>
+                </div>
+                <div class="alt-link">
+                    <p>Not a member? <a href="signup.html">Create an account</a></p>
+                </div>
+            </div>
+
+        </form>
+
+    </main>
+
+    <script type="module" src="firebase-init.js"></script>
+    <script src="login.js" type="module" defer></script>
+</body>
+
+</html>
