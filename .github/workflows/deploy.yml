@@ -22,11 +22,15 @@ jobs:
 
       - name: Generate config.js for Assignment 21
         run: |
-          echo "${{ secrets.FIREBASE_A21_CONFIG }}" > "Assignment 21 - JS Class 12 - Firebase Authentication/config.js"
+          cat << 'EOF' > "Assignment 21 - JS Class 12 - Firebase Authentication/config.js"
+          ${{ secrets.FIREBASE_A21_CONFIG }}
+          EOF
 
       - name: Generate config.js for Classwork 22
         run: |
-          echo "${{ secrets.FIREBASE_CW22_CONFIG }}" > "Classwork/Class Work 22 - JS Firebase Auth and DB/config.js"
+          cat << 'EOF' > "Classwork/Class Work 22 - JS Firebase Auth and DB/config.js"
+          ${{ secrets.FIREBASE_CW22_CONFIG }}
+          EOF
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
