@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App - Register</title>
+    <link rel="icon" type="image/x-icon" href="../JK-Favicon.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <h1 class="animate__animated animate__fadeInDown">Quiz App</h1>
+
+        <form id="signup-form" class="auth-card animate__animated animate__fadeInUp animate__delay-1s">
+            <h2>Register Now!</h2>
+
+            <div class="input-wrapper">
+                <input type="email" name="email" class="email" placeholder="Email Address" required>
+                <input type="password" name="password" class="password" placeholder="Password" required>
+            </div>
+
+            <div class="input-btns">
+                <button type="submit" class="submit-btn">Register</button>
+            </div>
+
+            <div class="alt-link">
+                <p>Already a member? <a href="index.html">Login here</a></p>
+            </div>
+        </form>
+
+        <p id="credits" class="animate__animated animate__fadeIn animate__delay-2s">Powered by JK</p>
+    </main>
+
+    <script type="module" src="register.js"></script>
+</body>
+
+</html>

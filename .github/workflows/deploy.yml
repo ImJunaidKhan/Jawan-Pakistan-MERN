@@ -20,6 +20,12 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
 
+      - name: Generate config.js for Assignment 20
+        run: |
+          cat << 'EOF' > "Assignment 20 - JS Class 11 - Quiz App/config.js"
+          ${{ secrets.FIREBASE_A20_CONFIG }}
+          EOF
+
       - name: Generate config.js for Assignment 21
         run: |
           cat << 'EOF' > "Assignment 21 - JS Class 12 - Firebase Authentication/config.js"

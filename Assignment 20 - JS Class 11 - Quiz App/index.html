@@ -4,47 +4,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assignment 20 - JS Class 11 - Quiz App</title>
+    <title>Quiz App - Login</title>
     <link rel="icon" type="image/x-icon" href="../JK-Favicon.png">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
     <main>
         <h1 class="animate__animated animate__fadeInDown">Quiz App</h1>
-        <section id="quiz-wrapper" class="animate__animated animate__fadeInUp animate__delay-1s">
-            <div id="quiz-intro">
-                <h2>Ready for the Challenge?</h2>
-                <p class="message start-message">Prove your smarts, track your progress, and aim for a 100% score. Jump
-                    in and
-                    test your speed and
-                    accuracy.</p>
-                <button onclick="startQuiz()">Begin Quiz</button>
+
+        <form id="signup-form" class="auth-card animate__animated animate__fadeInUp animate__delay-1s">
+            <h2>Login</h2>
+
+            <div class="input-wrapper">
+                <input type="email" name="email" class="email" placeholder="Email Address" required>
+                <input type="password" name="password" class="password" placeholder="Password" required>
             </div>
 
-            <div id="quiz-questions">
+            <div class="input-btns">
+                <button type="submit" class="submit-btn">Login</button>
             </div>
 
-            <div id="quiz-ending">
-                <h2>Quiz Completed!</h2>
-                <p class="message score-display">You scored <span id="user-score">0</span> out of <span
-                        id="total-score">10</span> (<span id="score-percentage">0%</span>)</p>
-                <p class="message ending-message">Great effort! Practice makes perfect. Try again to hit a 100% score.
-                </p>
-                <button onclick="restartQuiz()">Try Again</button>
+            <div class="alt-link">
+                <p>Not a member? <a href="signup.html">Create an account</a></p>
             </div>
-
-        </section>
+        </form>
 
         <p id="credits" class="animate__animated animate__fadeIn animate__delay-2s">Powered by JK</p>
     </main>
 
-
-    <script src="app.js"></script>
+    <script type="module" src="login.js"></script>
 </body>
 
 </html>

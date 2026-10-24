@@ -1,3 +1,42 @@
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-app.js";
+import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-auth.js";
+import { getDatabase, ref, set, get } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-database.js";
+
+import { firebaseConfig } from "./config.js";
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const db = getDatabase(app);
+
+var currentUser = null;
+
+onAuthStateChanged(auth, (user) => {
+    if (user) {
+        currentUser = user;
+        loadLastScore();
+    }
+
+    else {
+        window.location.href = "index.html";
+    }
+});
+
+function loadLastScore() {
+    get(ref(db, "scores/" + currentUser.uid)).then((snapshot) => {
+
+        var data = snapshot.val();
+
+        if (data) {
+            var lastScoreEl = document.querySelector("#last-score");
+
+            if (lastScoreEl) {
+                lastScoreEl.innerText = "Previous Score: " + data.score + " / " + data.total;
+                lastScoreEl.style.display = "block";
+            }
+        }
+    });
+}
+
 var questions = [
     {
         question: "What does HTML stand for?",
@@ -167,6 +206,7 @@ var endingBox = document.querySelector("#quiz-ending");
 
 var count = 0;
 var score = 0;
+var userAnswers = {};
 
 function startQuiz() {
     introBox.style.display = "none";
@@ -174,17 +214,25 @@ function startQuiz() {
     questionsDisplay();
 }
 
+function saveAnswer(val) {
+    userAnswers[count] = val;
+}
+
 function questionsDisplay() {
+    var opt1 = userAnswers[count] === "option1" ? "checked" : "";
+    var opt2 = userAnswers[count] === "option2" ? "checked" : "";
+    var opt3 = userAnswers[count] === "option3" ? "checked" : "";
+
     questionBox.innerHTML = `
         <h3>${questions[count].question}</h3>
-                <div><input type="radio" name="question${count}" value="option1" id="option1"> <label for="option1">${questions[count].option1}</label></div>
-                <div><input type="radio" name="question${count}" value="option2" id="option2"> <label for="option2">${questions[count].option2}</label></div>
-                <div><input type="radio" name="question${count}" value="option3" id="option3"> <label for="option3">${questions[count].option3}</label></div>
-                <div>
-                    <button id="prevbtn" onclick="previousQuestion()">Previous</button>
-                    <button id="nextbtn" onclick="nextQuestion()">Next</button>
-                    <button id="submitbtn" onclick="finish()">Finish</button>
-                </div>
+        <div><input type="radio" name="question${count}" value="option1" id="option1" ${opt1} onchange="saveAnswer('option1')"> <label for="option1">${questions[count].option1}</label></div>
+        <div><input type="radio" name="question${count}" value="option2" id="option2" ${opt2} onchange="saveAnswer('option2')"> <label for="option2">${questions[count].option2}</label></div>
+        <div><input type="radio" name="question${count}" value="option3" id="option3" ${opt3} onchange="saveAnswer('option3')"> <label for="option3">${questions[count].option3}</label></div>
+        <div>
+            <button id="prevbtn" onclick="previousQuestion()">Previous</button>
+            <button id="nextbtn" onclick="nextQuestion()">Next</button>
+            <button id="submitbtn" onclick="finish()">Finish</button>
+        </div>
     `;
 
     if (count > 0) {
@@ -211,16 +259,25 @@ function nextQuestion() {
         return;
     }
 
-    if (questions[count][selectedOption.value] == questions[count].answer) {
-        score += questions[count].score;
-        console.log(score);
-    }
-
+    userAnswers[count] = selectedOption.value;
     count++;
     questionsDisplay();
 }
 
 function finish() {
+    var selectedOption = document.querySelector(`input[name="question${count}"]:checked`);
+    if (selectedOption) {
+        userAnswers[count] = selectedOption.value;
+    }
+
+    score = 0;
+    for (var i = 0; i < questions.length; i++) {
+        var ans = userAnswers[i];
+        if (ans && questions[i][ans] == questions[i].answer) {
+            score += questions[i].score;
+        }
+    }
+
     var userScore = document.querySelector("#user-score");
     var totalScore = document.querySelector("#total-score");
     var userPercentage = document.querySelector("#score-percentage");
@@ -228,6 +285,14 @@ function finish() {
     userScore.innerHTML = score;
     totalScore.innerHTML = questions.length * 5;
     userPercentage.innerHTML = (userScore.innerHTML / totalScore.innerHTML) * 100 + "%";
+
+    if (currentUser) {
+        set(ref(db, "scores/" + currentUser.uid), {
+            score: score,
+            total: questions.length * 5,
+            answers: userAnswers
+        });
+    }
 
     questionBox.style.display = "none";
     endingBox.style.display = "block";
@@ -238,4 +303,20 @@ function restartQuiz() {
     introBox.style.display = "block";
     count = 0;
     score = 0;
+    userAnswers = {};
+    loadLastScore();
 }
+
+function logoutUser() {
+    signOut(auth).then(() => {
+        window.location.href = "index.html";
+    });
+}
+
+window.startQuiz = startQuiz;
+window.saveAnswer = saveAnswer;
+window.previousQuestion = previousQuestion;
+window.nextQuestion = nextQuestion;
+window.finish = finish;
+window.restartQuiz = restartQuiz;
+window.logoutUser = logoutUser;
