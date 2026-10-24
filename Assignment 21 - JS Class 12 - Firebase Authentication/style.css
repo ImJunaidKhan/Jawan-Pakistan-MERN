@@ -134,6 +134,19 @@ main.dashboard {
     flex: 1;
 }
 
+.logout-btn {
+    background-color: #dc3545;
+    border-color: #dc3545;
+    margin-top: 15px;
+}
+
+.logout-btn:hover {
+    background-color: #ffffff;
+    color: #dc3545;
+    border-color: #dc3545;
+}
+
+
 
 @media (max-width: 480px) {
     .input-wrapper {
