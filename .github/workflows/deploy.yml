@@ -28,7 +28,7 @@ jobs:
 
       - name: Generate config.js for Assignment 21
         run: |
-          cat << 'EOF' > "Assignment 21 - JS Class 12 - Firebase Authentication/config.js"
+          cat << 'EOF' > "Assignment 21 - JS Class 12 - Todo App with Firebase Authentication/config.js"
           ${{ secrets.FIREBASE_A21_CONFIG }}
           EOF
 
